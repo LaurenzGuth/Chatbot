@@ -1,0 +1,63 @@
+version: "3.1"
+
+nlu:
+- intent: inform_level
+  examples: |
+    - [Anfänger](level)
+    - [Fortgeschritten](level)
+    - [Profi](level)
+
+- intent: inform_weakness
+  examples: |
+    - [Fingerkraft](weakness)
+    - [Fußarbeit](weakness)
+
+- intent: greet
+  examples: |
+    - Hi
+    - Hallo
+    - Was geht?
+    - Guten Tag
+    - Servus
+    - Grüß dich    
+    - Moin
+    - Hey
+    - Hallo zusammen
+    - Hi there
+    - Hello
+    - Hi bot
+    - Hey you
+    - Hi again
+    - Hi folks
+    - Guten Morgen
+    - Guten Mittag
+    - Guten Nachmittag
+    - Guten Abend
+    - Wie geht's?
+    - Alles klar?
+    - Na?
+    - Hi alle
+    - Hallo Leute
+    - Hey zusammen
+    - Hi ihr
+    - Hallo Welt
+    
+
+- intent: goodbye
+  examples: |
+    - By
+    - Bye
+    - Tschüss
+    - Auf Wiedersehen
+    - Bis später
+    - Bis dann
+    - Ciao
+    - Mach's gut
+    - Adieu
+    - Leb wohl
+    - Bis bald
+    - Servus
+    - Tschau
+    - Bis morgen
+    - Man sieht sich
+    

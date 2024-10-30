@@ -1,0 +1,38 @@
+version: "3.1"
+intents:
+  - greet
+  - goodbye
+  - inform_level
+  - inform_weakness
+
+entities:
+  - level
+  - weakness
+
+slots:
+  level:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: level
+  weakness:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: weakness
+
+responses:
+  utter_greet:
+    - text: "Willkommen beim Boulder-Trainer! Bist du Anfänger, Fortgeschritten oder Profi?"
+
+  utter_goodbye:
+    - text: "Viel Erfolg mit der Übung und viel Spaß beim Bouldern!"
+
+  utter_ask_weakness:
+    - text: "Alles klar, du bist also auf dem {level} Level. An welcher Schwäche möchtest du arbeiten?"
+
+  utter_suggest_exercise:
+    - text: "Für dein {level} Level und deine Schwäche {weakness}, empfehle ich folgende Übung: {exercise}"
+
+actions:
+  - action_suggest_exercise

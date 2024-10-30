@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: suggest exercise flow
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: inform_level
+    entities:
+    - level: "Fortgeschritten"
+  - slot_was_set:
+    - level: "Fortgeschritten"
+  - action: utter_ask_weakness
+  - intent: inform_weakness
+    entities:
+    - weakness: "Fingerkraft"
+  - slot_was_set:
+    - weakness: "Fingerkraft"
+  - action: action_suggest_exercise
+
+- story: user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
