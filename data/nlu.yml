@@ -60,4 +60,12 @@ nlu:
     - Tschau
     - Bis morgen
     - Man sieht sich
+
+- intent: beleidigung
+  examples: |
+    - Hurensohn!
+    - Du Hurensohn!
+    - Fick dich!
+    - Halts maul!
+    - Du mongo!
     

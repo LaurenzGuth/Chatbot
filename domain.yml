@@ -4,6 +4,7 @@ intents:
   - goodbye
   - inform_level
   - inform_weakness
+  - hurensohn
 
 entities:
   - level
@@ -33,6 +34,9 @@ responses:
 
   utter_suggest_exercise:
     - text: "Für dein {level} Level und deine Schwäche {weakness}, empfehle ich folgende Übung: {exercise}"
+
+  utter_beleidigung:
+    - text: "Beleidungen sind hier nicht erwünscht!"
 
 actions:
   - action_suggest_exercise
