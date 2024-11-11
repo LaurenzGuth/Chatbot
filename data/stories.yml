@@ -29,7 +29,7 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: beleidung
+- story: beleidigung
   steps:
   - intent: beleidigung
   - action: utter_beleidigung

@@ -4,7 +4,7 @@ intents:
   - goodbye
   - inform_level
   - inform_weakness
-  - hurensohn
+  - beleidigung
 
 entities:
   - level
