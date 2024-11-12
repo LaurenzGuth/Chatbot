@@ -24,7 +24,7 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Willkommen beim Boulder-Trainer! Bist du Anfänger, Fortgeschritten oder Profi?"
+    - text: "Willkommen beim Boulder-Trainer! Auf welchem Level boulderst du? (FB Scala)"
 
   utter_goodbye:
     - text: "Viel Erfolg mit der Übung und viel Spaß beim Bouldern!"

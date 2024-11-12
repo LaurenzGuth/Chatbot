@@ -3,14 +3,21 @@ version: "3.1"
 nlu:
 - intent: inform_level
   examples: |
-    - [Anfänger](level)
-    - [Fortgeschritten](level)
-    - [Profi](level)
+    - [4b](level)
+    - [5c](level)
+    - [9a](level)
+    - [6c](level)
+    - [7a](level)
+    - [8b](level)
 
 - intent: inform_weakness
   examples: |
     - [Fingerkraft](weakness)
     - [Fußarbeit](weakness)
+    - [Körperspannung](weakness)
+    - [Mental](weakness)
+    - [Zugkraft](weakness)
+    
 
 - intent: greet
   examples: |

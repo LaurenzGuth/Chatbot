@@ -29,7 +29,7 @@ class ActionSuggestExercise(Action):
 
         weakness = tracker.get_slot("weakness")
         # Nutzer-Level extrahieren (zum Beispiel aus einem Slot)
-        user_level = tracker.get_slot("level")
+        user_level = ''.join(filter(str.isdigit, tracker.get_slot("level")))
 
         # Übung basierend auf dem Level abrufen
         exercise = self.exercises_collection.find_one({"level": user_level})
