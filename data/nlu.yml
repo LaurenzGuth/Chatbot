@@ -20,11 +20,11 @@ nlu:
 
 - intent: ask_exercise
   examples: |
-    - Ich hätte gerne eine Übung für [Zugkraft](weakness).
-    - Kannst du mir eine Übung für [Fingerkraft](weakness) empfehlen?
-    - Welche Übung ist gut für [Mental](weakness)?
-    - Ich brauche eine Übung für [Zugkraft](weakness).
-    - Hast du eine Übung für [Fingerkraft](weakness)?   
+    - Ich hätte gerne eine Übung für [Zugkraft](askExercise).
+    - Kannst du mir eine Übung für [Fingerkraft](askExercise) empfehlen?
+    - Welche Übung ist gut für [Mental](askExercise)?
+    - Ich brauche eine Übung für [Zugkraft](askExercise).
+    - Hast du eine Übung für [Fingerkraft](askExercise)?   
 
 - intent: greet
   examples: |

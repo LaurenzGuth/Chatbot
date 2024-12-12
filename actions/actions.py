@@ -28,17 +28,14 @@ class ActionSuggestExercise(Action):
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         weakness = tracker.get_slot("weakness")
-        # Nutzer-Level extrahieren (zum Beispiel aus einem Slot)
-        user_level = ''.join(filter(str.isdigit, tracker.get_slot("level")))
 
-        # Übung basierend auf dem Level abrufen
-        exercise = self.exercises_collection.find_one({"level": user_level})
+        user_level = ''.join(filter(str.isdigit, tracker.get_slot("level")))[:1]
 
-        # Falls Übung gefunden wird, sende die Übung als Antwort
+        exercise = self.exercises_collection.find_one({"level": user_level, "tags": weakness})
         if exercise:
             message = f"Hier ist eine Übung für dich: {exercise['name']} - {exercise['description']}"
         else:
-            message = "Leider habe ich keine Übung für dein Level gefunden."
+            message = "Leider habe ich keine Übung für dein Level gefunden." + user_level + weakness
 
         dispatcher.utter_message(text=message)
         return []
@@ -57,16 +54,14 @@ class ActionSuggestExerciseByType(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        weakness = tracker.get_slot("weakness")
+        askExercise = tracker.get_slot("askExercise")
 
-        # Übung basierend auf dem Typ abrufen
-        exercise = self.exercises_collection.find_one({"type": weakness})
+        exercise = self.exercises_collection.find_one({"tags": askExercise})
 
-        # Falls Übung gefunden wird, sende die Übung als Antwort
         if exercise:
-            message = f"Hier ist eine Übung für {weakness}: {exercise['name']} - {exercise['description']}"
+            message = f"Hier ist eine Übung für {askExercise}: {exercise['name']} - {exercise['description']}"
         else:
-            message = f"Leider habe ich keine Übung für {weakness} gefunden."
+            message = f"Leider habe ich keine Übung für {askExercise} gefunden."
 
         dispatcher.utter_message(text=message)
         return []

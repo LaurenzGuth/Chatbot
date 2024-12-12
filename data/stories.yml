@@ -28,9 +28,9 @@ stories:
   steps:
   - intent: ask_exercise
     entities:
-    - weakness: "Zugkraft"
+    - askExercise: "Zugkraft"
   - slot_was_set:
-    - weakness: "Zugkraft"
+    - askExercise: "Zugkraft"
   - action: action_suggest_exercise_by_type
 
 
