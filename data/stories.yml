@@ -24,13 +24,19 @@ stories:
     - weakness: "Fingerkraft"
   - action: action_suggest_exercise
 
+- story: user asks for specific exercise
+  steps:
+  - intent: ask_exercise
+    entities:
+    - weakness: "Zugkraft"
+  - slot_was_set:
+    - weakness: "Zugkraft"
+  - action: action_suggest_exercise_by_type
+
+
 - story: user says goodbye
   steps:
   - intent: goodbye
   - action: utter_goodbye
 
-- story: beleidigung
-  steps:
-  - intent: beleidigung
-  - action: utter_beleidigung
 

@@ -17,7 +17,14 @@ nlu:
     - [Körperspannung](weakness)
     - [Mental](weakness)
     - [Zugkraft](weakness)
-    
+
+- intent: ask_exercise
+  examples: |
+    - Ich hätte gerne eine Übung für [Zugkraft](weakness).
+    - Kannst du mir eine Übung für [Fingerkraft](weakness) empfehlen?
+    - Welche Übung ist gut für [Mental](weakness)?
+    - Ich brauche eine Übung für [Zugkraft](weakness).
+    - Hast du eine Übung für [Fingerkraft](weakness)?   
 
 - intent: greet
   examples: |
@@ -25,7 +32,6 @@ nlu:
     - Hallo
     - Was geht?
     - Guten Tag
-    - Servus
     - Grüß dich    
     - Moin
     - Hey
@@ -34,20 +40,6 @@ nlu:
     - Hello
     - Hi bot
     - Hey you
-    - Hi again
-    - Hi folks
-    - Guten Morgen
-    - Guten Mittag
-    - Guten Nachmittag
-    - Guten Abend
-    - Wie geht's?
-    - Alles klar?
-    - Na?
-    - Hi alle
-    - Hallo Leute
-    - Hey zusammen
-    - Hi ihr
-    - Hallo Welt
     
 
 - intent: goodbye
@@ -60,21 +52,9 @@ nlu:
     - Bis dann
     - Ciao
     - Mach's gut
-    - Adieu
-    - Leb wohl
-    - Bis bald
-    - Servus
     - Tschau
     - Bis morgen
     - Man sieht sich
 
-- intent: beleidigung
-  examples: |
-    - Hurensohn!
-    - Du Hurensohn!
-    - Fick dich!
-    - Halts maul!
-    - Du mongo!
-    - Arschloch
     
     

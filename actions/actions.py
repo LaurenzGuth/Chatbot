@@ -42,3 +42,31 @@ class ActionSuggestExercise(Action):
 
         dispatcher.utter_message(text=message)
         return []
+
+
+class ActionSuggestExerciseByType(Action):
+    def name(self) -> Text:
+        return "action_suggest_exercise_by_type"
+
+    def __init__(self):
+        self.client = MongoClient("mongodb://localhost:27017/")
+        self.db = self.client["exercise_database"]
+        self.exercises_collection = self.db["exercises"]
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        weakness = tracker.get_slot("weakness")
+
+        # Übung basierend auf dem Typ abrufen
+        exercise = self.exercises_collection.find_one({"type": weakness})
+
+        # Falls Übung gefunden wird, sende die Übung als Antwort
+        if exercise:
+            message = f"Hier ist eine Übung für {weakness}: {exercise['name']} - {exercise['description']}"
+        else:
+            message = f"Leider habe ich keine Übung für {weakness} gefunden."
+
+        dispatcher.utter_message(text=message)
+        return []

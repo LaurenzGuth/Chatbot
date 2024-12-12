@@ -4,7 +4,7 @@ intents:
   - goodbye
   - inform_level
   - inform_weakness
-  - beleidigung
+  - ask_exercise
 
 entities:
   - level
@@ -40,3 +40,4 @@ responses:
 
 actions:
   - action_suggest_exercise
+  - action_suggest_exercise_by_type
