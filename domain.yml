@@ -5,6 +5,7 @@ intents:
   - inform_level
   - inform_weakness
   - ask_exercise
+  - work_on_weakness
 
 entities:
   - level
@@ -32,19 +33,19 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Willkommen beim Boulder-Trainer! Auf welchem Level boulderst du? (FB Scala)"
+    - text: "Willkommen beim Boulder-Trainer! Wie kann ich dir weiterhelfen?"
 
   utter_goodbye:
     - text: "Viel Erfolg mit der Übung und viel Spaß beim Bouldern!"
+
+  utter_ask_level:
+    - text: "Auf welchem Level Boulderst du denn? (FB)"
 
   utter_ask_weakness:
     - text: "Alles klar, du bist also auf dem {level} Level. An welcher Schwäche möchtest du arbeiten?"
 
   utter_suggest_exercise:
     - text: "Für dein {level} Level und deine Schwäche {weakness}, empfehle ich folgende Übung: {exercise}"
-
-  utter_beleidigung:
-    - text: "Beleidungen sind hier nicht erwünscht!"
 
 actions:
   - action_suggest_exercise

@@ -9,19 +9,18 @@ stories:
 
 - story: suggest exercise flow
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: work_on_weakness
+    entities:
+      - weakness: "Fingerkraft"
+  - slot_was_set:
+      - weakness: "Fingerkraft"
+  - action: utter_ask_level
   - intent: inform_level
     entities:
-    - level: "Fortgeschritten"
+    - level: "7a"
   - slot_was_set:
-    - level: "Fortgeschritten"
-  - action: utter_ask_weakness
-  - intent: inform_weakness
-    entities:
-    - weakness: "Fingerkraft"
-  - slot_was_set:
-    - weakness: "Fingerkraft"
+    - level: "7a"
+
   - action: action_suggest_exercise
 
 - story: user asks for specific exercise

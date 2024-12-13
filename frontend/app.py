@@ -25,5 +25,13 @@ def chat():
     else:
         return jsonify({"error": "Unable to process the message"}), response.status_code
 
+@app.route("/restart", methods=["POST"])
+def restart():
+    response = requests.post(f"{RASA_SERVER_URL}/conversations/default/restart")
+    if response.status_code == 200:
+        return jsonify({"message": "Bot has been restarted"})
+    else:
+        return jsonify({"error": "Failed to restart the bot"}), response.status_code
+
 if __name__ == "__main__":
     app.run(port=5000)

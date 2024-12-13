@@ -31,7 +31,12 @@ class ActionSuggestExercise(Action):
 
         user_level = ''.join(filter(str.isdigit, tracker.get_slot("level")))[:1]
 
-        exercise = self.exercises_collection.find_one({"level": user_level, "tags": weakness})
+        level_range = [int(user_level) - 1, int(user_level), int(user_level) + 1]
+
+        exercise = self.exercises_collection.find_one({
+            "level": {"$in": level_range},
+            "tags": weakness
+        })
         if exercise:
             message = f"Hier ist eine Übung für dich: {exercise['name']} - {exercise['description']}"
         else:
@@ -54,14 +59,14 @@ class ActionSuggestExerciseByType(Action):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
-        askExercise = tracker.get_slot("askExercise")
+        askexercise = tracker.get_slot("askExercise")
 
-        exercise = self.exercises_collection.find_one({"tags": askExercise})
+        exercise = self.exercises_collection.find_one({"tags": askexercise})
 
         if exercise:
-            message = f"Hier ist eine Übung für {askExercise}: {exercise['name']} - {exercise['description']}"
+            message = f"Hier ist eine Übung für {askexercise}: {exercise['name']} - {exercise['description']}"
         else:
-            message = f"Leider habe ich keine Übung für {askExercise} gefunden."
+            message = f"Leider habe ich keine Übung für {askexercise} gefunden."
 
         dispatcher.utter_message(text=message)
         return []

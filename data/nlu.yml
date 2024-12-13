@@ -14,9 +14,16 @@ nlu:
   examples: |
     - [Fingerkraft](weakness)
     - [Fußarbeit](weakness)
-    - [Körperspannung](weakness)
-    - [Mental](weakness)
-    - [Zugkraft](weakness)
+    - Meine [Körperspannung](weakness) ist nicht so gut.
+    - Mir rutscht ständig der [Fuß](weakness) weg.
+    - Ich habe Probleme mit meiner [Mental](weakness) Stärke.
+
+- intent: work_on_weakness
+  examples: |
+    - Ich möchte an meiner [Fingerkraft](weakness) arbeiten.
+    - Ich will meine [Fußarbeit](weakness) verbessern.
+    - Ich möchte an meiner [Körperspannung](weakness) arbeiten.
+    - Ich will meine [Mental](weakness) Stärken.
 
 - intent: ask_exercise
   examples: |
