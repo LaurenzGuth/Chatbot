@@ -6,6 +6,8 @@ intents:
   - inform_weakness
   - ask_exercise
   - work_on_weakness
+  - thankyou
+  - another-one
 
 entities:
   - level
@@ -36,10 +38,13 @@ responses:
     - text: "Willkommen beim Boulder-Trainer! Wie kann ich dir weiterhelfen?"
 
   utter_goodbye:
-    - text: "Viel Erfolg mit der Übung und viel Spaß beim Bouldern!"
+    - text: "Bis zum nächsten Mal und viel Spaß beim Bouldern!"
 
   utter_ask_level:
     - text: "Auf welchem Level Boulderst du denn? (FB)"
+
+  utter_thanks:
+    - text: "Gern geschehen!"
 
   utter_ask_weakness:
     - text: "Alles klar, du bist also auf dem {level} Level. An welcher Schwäche möchtest du arbeiten?"

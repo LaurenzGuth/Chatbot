@@ -10,13 +10,6 @@ nlu:
     - [7a](level)
     - [8b](level)
 
-- intent: inform_weakness
-  examples: |
-    - [Fingerkraft](weakness)
-    - [Fußarbeit](weakness)
-    - Meine [Körperspannung](weakness) ist nicht so gut.
-    - Mir rutscht ständig der [Fuß](weakness) weg.
-    - Ich habe Probleme mit meiner [Mental](weakness) Stärke.
 
 - intent: work_on_weakness
   examples: |
@@ -24,14 +17,23 @@ nlu:
     - Ich will meine [Fußarbeit](weakness) verbessern.
     - Ich möchte an meiner [Körperspannung](weakness) arbeiten.
     - Ich will meine [Mental](weakness) Stärken.
+    - Ich möchte meine [Stabilität](weakness) verbessern.
+    - ich würde gerne meine [Zugkraft](weakness) verbessern.
 
 - intent: ask_exercise
   examples: |
-    - Ich hätte gerne eine Übung für [Zugkraft](askExercise).
     - Kannst du mir eine Übung für [Fingerkraft](askExercise) empfehlen?
     - Welche Übung ist gut für [Mental](askExercise)?
-    - Ich brauche eine Übung für [Zugkraft](askExercise).
-    - Hast du eine Übung für [Fingerkraft](askExercise)?   
+    - Sag mir eine Übung für [Stabilität](askExercise)!
+    - Hast du eine Übung für [Körperspannung](askExercise)?   
+    - Gib mir eine Trainingsübung für [Beine](askExercise)!
+
+- intent: another-one
+  examples: |
+    - Noch eine!
+    - Eine weitere übung.
+    - Noch eine Übung bitte
+    - Eine Andere
 
 - intent: greet
   examples: |
@@ -62,6 +64,13 @@ nlu:
     - Tschau
     - Bis morgen
     - Man sieht sich
+
+- intent: thankyou
+  examples: |
+    - Danke
+    - Vielen Dank!
+    - Thanks
+    - Ty
 
     
     

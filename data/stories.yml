@@ -2,11 +2,6 @@ version: "3.1"
 
 stories:
 
-- story: greet
-  steps:
-  - intent: greet
-  - action: utter_greet
-
 - story: suggest exercise flow
   steps:
   - intent: work_on_weakness
@@ -20,22 +15,42 @@ stories:
     - level: "7a"
   - slot_was_set:
     - level: "7a"
-
   - action: action_suggest_exercise
 
-- story: user asks for specific exercise
-  steps:
-  - intent: ask_exercise
-    entities:
-    - askExercise: "Zugkraft"
-  - slot_was_set:
-    - askExercise: "Zugkraft"
-  - action: action_suggest_exercise_by_type
+rules:
+
+  - rule: user says hello
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: user says thankyou
+    steps:
+      - intent: thankyou
+      - action: utter_thanks
+
+  - rule: another exercise
+    condition:
+      - slot_was_set:
+          - weakness
+    steps:
+      - intent: another-one
+      - action: action_suggest_exercise_by_type
 
 
-- story: user says goodbye
-  steps:
-  - intent: goodbye
-  - action: utter_goodbye
+  - rule: user asks for exercise
+    steps:
+      - intent: ask_exercise
+        entities:
+          - askExercise: "Zugkraft"
+      - slot_was_set:
+          - askExercise: "Zugkraft"
+      - action: action_suggest_exercise_by_type
+
 
 
