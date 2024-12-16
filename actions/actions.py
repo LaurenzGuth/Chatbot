@@ -2,6 +2,7 @@ from typing import Any, Text, Dict, List
 from pymongo import MongoClient
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
+from .exercise_history import ExerciseHistory
 
 
 class ActionSuggestExercise(Action):
@@ -12,7 +13,7 @@ class ActionSuggestExercise(Action):
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["exercise_database"]
         self.exercises_collection = self.db["exercises"]
-        self.last_exercises = []
+        self.history = ExerciseHistory()
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -25,13 +26,11 @@ class ActionSuggestExercise(Action):
         exercise = self.exercises_collection.find_one({
             "level": {"$in": level_range},
             "tags": weakness,
-            "_id": {"$nin": self.last_exercises}
+            "_id": {"$nin": self.history.get_last_exercises()}
         })
 
         if exercise:
-            self.last_exercises.append(exercise["_id"])
-            if len(self.last_exercises) > 5:
-                self.last_exercises.pop(0)
+            self.history.add_exercise(exercise["_id"])
             message = f"Hier ist eine Übung für dich: {exercise['name']} - {exercise['description']}"
         else:
             message = "Leider habe ich keine Übung für dein Level gefunden."
@@ -48,7 +47,7 @@ class ActionSuggestExerciseByType(Action):
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["exercise_database"]
         self.exercises_collection = self.db["exercises"]
-        self.last_exercises = []
+        self.history = ExerciseHistory()
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -58,13 +57,11 @@ class ActionSuggestExerciseByType(Action):
 
         exercise = self.exercises_collection.find_one({
             "tags": weakness,
-            "_id": {"$nin": self.last_exercises}
+            "_id": {"$nin": self.history.get_last_exercises()}
         })
 
         if exercise:
-            self.last_exercises.append(exercise["_id"])
-            if len(self.last_exercises) > 5:
-                self.last_exercises.pop(0)
+            self.history.add_exercise(exercise["_id"])
             message = f"Hier ist eine Übung für {weakness}: {exercise['name']} - {exercise['description']}"
         else:
             message = f"Leider habe ich keine Übung für {weakness} gefunden."
@@ -81,24 +78,27 @@ class ActionSuggestAnotherExercise(Action):
         self.client = MongoClient("mongodb://localhost:27017/")
         self.db = self.client["exercise_database"]
         self.exercises_collection = self.db["exercises"]
-        self.last_exercises = []
+        self.history = ExerciseHistory()
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
 
         weakness = tracker.get_slot("weakness")
+        user_level = int(tracker.get_slot("level")[0])
 
         exercise = self.exercises_collection.find_one({
             "tags": weakness,
-            "_id": {"$nin": self.last_exercises}
+            "_id": {"$nin": self.history.get_last_exercises()}
         })
 
         if exercise:
-            self.last_exercises.append(exercise["_id"])
-            if len(self.last_exercises) > 5:
-                self.last_exercises.pop(0)
-            message = f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']}"
+            self.history.add_exercise(exercise["_id"])
+            if exercise['level'] > user_level:
+                message = (f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']} "
+                           f"Bedenke, dass diese Übung ein höheres Level hat! Übungslevel: {exercise['level']}")
+            else:
+                message = f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']}"
         else:
             message = f"Leider habe ich keine weitere Übung für {weakness} gefunden."
 
