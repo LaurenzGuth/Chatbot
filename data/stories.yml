@@ -40,16 +40,16 @@ rules:
           - weakness
     steps:
       - intent: another-one
-      - action: action_suggest_exercise_by_type
+      - action: action_suggest_another_exercise
 
 
   - rule: user asks for exercise
     steps:
       - intent: ask_exercise
         entities:
-          - askExercise: "Zugkraft"
+          - weakness: "Zugkraft"
       - slot_was_set:
-          - askExercise: "Zugkraft"
+          - weakness: "Zugkraft"
       - action: action_suggest_exercise_by_type
 
 

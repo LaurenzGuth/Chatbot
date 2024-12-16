@@ -12,7 +12,6 @@ intents:
 entities:
   - level
   - weakness
-  - askExercise
 
 slots:
   level:
@@ -31,7 +30,7 @@ slots:
     type: text
     mappings:
     - type: from_entity
-      entity: askExercise
+      entity: weakness
 
 responses:
   utter_greet:
@@ -55,3 +54,4 @@ responses:
 actions:
   - action_suggest_exercise
   - action_suggest_exercise_by_type
+  - action_suggest_another_exercise

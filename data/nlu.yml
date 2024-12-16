@@ -22,13 +22,13 @@ nlu:
 
 - intent: ask_exercise
   examples: |
-    - Kannst du mir eine Übung für [Fingerkraft](askExercise) empfehlen?
-    - Welche Übung ist gut für [Mental](askExercise)?
-    - Sag mir eine Übung für [Stabilität](askExercise)!
-    - Hast du eine Übung für [Körperspannung](askExercise)?   
-    - Gib mir eine Trainingsübung für [Beine](askExercise)!
-    - Eine Übung für den [Po](askExercise)
-    - Eine für [Klimmzüge](askExercise)
+    - Kannst du mir eine Übung für [Fingerkraft](weakness) empfehlen?
+    - Welche Übung ist gut für [Mental](weakness)?
+    - Sag mir eine Übung für [Stabilität](weakness)!
+    - Hast du eine Übung für [Körperspannung](weakness)?   
+    - Gib mir eine Trainingsübung für [Beine](weakness)!
+    - Eine Übung für den [Po](weakness)
+    - Eine für [Klimmzüge](weakness)
 
 - intent: another-one
   examples: |
