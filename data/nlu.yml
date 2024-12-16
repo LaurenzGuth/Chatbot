@@ -27,6 +27,8 @@ nlu:
     - Sag mir eine Übung für [Stabilität](askExercise)!
     - Hast du eine Übung für [Körperspannung](askExercise)?   
     - Gib mir eine Trainingsübung für [Beine](askExercise)!
+    - Eine Übung für den [Po](askExercise)
+    - Eine für [Klimmzüge](askExercise)
 
 - intent: another-one
   examples: |
