@@ -9,6 +9,9 @@ nlu:
     - [6c](level)
     - [7a](level)
     - [8b](level)
+    - [4](level)
+    - [5](level)
+    - [6](level)
 
 
 - intent: work_on_weakness
@@ -29,6 +32,7 @@ nlu:
     - Gib mir eine Trainingsübung für [Beine](weakness)!
     - Eine Übung für den [Po](weakness)
     - Eine für [Klimmzüge](weakness)
+    - Ich suche eine [Dehnübung](weakness)
 
 - intent: another-one
   examples: |
@@ -36,6 +40,19 @@ nlu:
     - Eine weitere übung.
     - Noch eine Übung bitte
     - Eine Andere
+    - noch eine
+    - noch eine Übung
+    - noch eine Übung bitte
+    - eine weitere
+    
+
+- intent: tell_a_joke
+  examples: |
+    - Erzähl mir einen Witz
+    - Hast du einen Witz für mich?
+    - Witz
+    - Erzähl einen Witz
+    - Witz bitte
 
 - intent: greet
   examples: |

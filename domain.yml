@@ -8,6 +8,7 @@ intents:
   - work_on_weakness
   - thankyou
   - another-one
+  - tell_a_joke
 
 entities:
   - level
@@ -55,3 +56,4 @@ actions:
   - action_suggest_exercise
   - action_suggest_exercise_by_type
   - action_suggest_another_exercise
+  - action_tell_a_joke

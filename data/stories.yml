@@ -17,6 +17,11 @@ stories:
     - level: "7a"
   - action: action_suggest_exercise
 
+- story: tell a joke
+  steps:
+  - intent: tell_a_joke
+  - action: action_tell_a_joke
+
 rules:
 
   - rule: user says hello
