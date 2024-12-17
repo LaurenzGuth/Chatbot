@@ -3,18 +3,20 @@ intents:
   - greet
   - goodbye
   - inform_level
-  - inform_weakness
   - ask_exercise
   - work_on_weakness
   - thankyou
-  - another-one
+  - another_one
   - tell_a_joke
+  - ask_weather
 
 entities:
   - level
   - weakness
+  - city
 
 slots:
+
   level:
     type: text
     mappings:
@@ -32,6 +34,12 @@ slots:
     mappings:
     - type: from_entity
       entity: weakness
+
+  city:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city
 
 responses:
   utter_greet:
@@ -57,3 +65,4 @@ actions:
   - action_suggest_exercise_by_type
   - action_suggest_another_exercise
   - action_tell_a_joke
+  - action_get_weather

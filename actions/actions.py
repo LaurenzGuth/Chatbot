@@ -98,8 +98,9 @@ class ActionSuggestAnotherExercise(Action):
         if exercise:
             self.history.add_exercise(exercise["_id"])
             if exercise['level'] > user_level & user_level != 42:
-                message = (f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']} "
-                           f"Bedenke, dass diese Übung ein höheres Level hat! Übungslevel: {exercise['level']}")
+                message = (
+                    f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']} "
+                    f"Bedenke, dass diese Übung ein höheres Level hat! Übungslevel: {exercise['level']}")
             else:
                 message = f"Hier ist eine weitere Übung für {weakness}: {exercise['name']} - {exercise['description']}"
         else:
@@ -127,5 +128,30 @@ class ActionTellAJoke(Action):
             joke_text = "Ich konnte keinen Witz finden, versuche es später noch einmal."
 
         dispatcher.utter_message(text=joke_text)
+
+        return []
+
+
+class ActionGetWeather(Action):
+    def name(self) -> Text:
+        return "action_get_weather"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        city = tracker.get_slot("city")
+
+        import requests
+
+        response = requests.get(
+            f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=d02948c3d14f29d8f64f6dd3a92fd499")
+        if response.status_code == 200:
+            weather = response.json()
+            weather_text = f"Das Wetter in {city} ist {weather['weather'][0]['description']}."
+        else:
+            weather_text = "Ich konnte keine Wetterinformationen finden, versuche es später noch einmal."
+
+        dispatcher.utter_message(text=weather_text)
 
         return []

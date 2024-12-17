@@ -22,6 +22,10 @@ nlu:
     - Ich will meine [Mental](weakness) Stärken.
     - Ich möchte meine [Stabilität](weakness) verbessern.
     - ich würde gerne meine [Zugkraft](weakness) verbessern.
+    - Ich möchte meine [Beweglichkeit](weakness) verbessern.
+    - Ich will meine [Kraftausdauer](weakness) steigern.
+    - Ich möchte an meiner [Technik](weakness) arbeiten.
+    - Ich will meine [Schnelligkeit](weakness) verbessern.
 
 - intent: ask_exercise
   examples: |
@@ -33,8 +37,12 @@ nlu:
     - Eine Übung für den [Po](weakness)
     - Eine für [Klimmzüge](weakness)
     - Ich suche eine [Dehnübung](weakness)
+    - Übung für [Schultern](weakness)
+    - Übung für [Rücken](weakness)
+    - Übung für [Bauch](weakness)
+    - Übung für [Brust](weakness)
 
-- intent: another-one
+- intent: another_one
   examples: |
     - Noch eine!
     - Eine weitere übung.
@@ -53,6 +61,24 @@ nlu:
     - Witz
     - Erzähl einen Witz
     - Witz bitte
+    - Erzähl mir was lustiges
+    - Erzähl mir einen Witz bitte
+    
+
+
+- intent: ask_weather
+  examples: |
+    - Wie ist das Wetter in [Berlin](city)?
+    - Wie wird das Wetter in [Hamburg](city)?
+    - wie wird das Wetter in [Frankfurt](city)?
+    - wetter in [München](city)
+    - Wetter in [Köln](city)
+    - Wetter in [Stuttgart](city)
+    - Wetter in [Tübingen](city)
+    - wie ist das aktuelle Wetter in [Reutlingen](city)?
+    - Kannst du mir das Wetter in [Leipzig](city) sagen?
+    - was ist die Wettervorhersage für [Tübingen](city)?
+    
 
 - intent: greet
   examples: |
