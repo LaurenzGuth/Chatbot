@@ -110,6 +110,47 @@ class ActionSuggestAnotherExercise(Action):
         return []
 
 
+class ActionGetDetails(Action):
+    def name(self) -> Text:
+        return "action_get_detail"
+
+    def __init__(self):
+        self.client = MongoClient("mongodb://localhost:27017/")
+        self.db = self.client["exercise_database"]
+        self.exercises_collection = self.db["exercises"]
+        self.history = ExerciseHistory()
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        details = tracker.get_slot("detail").lower()
+        last_exercise_id = self.history.get_last_exercises()[-1]
+
+        if last_exercise_id is None:
+            dispatcher.utter_message(text="Wähle erst eine Übung aus, über die du Details erfahren möchtest.")
+            return []
+
+        exercise = self.exercises_collection.find_one({"_id": last_exercise_id})
+
+        if details == "level":
+            message = f"Die Schwierigkeit der Übung {exercise['name']} ist {exercise['level']}."
+        elif details == "beschreibung":
+            message = f"Die Beschreibung der Übung {exercise['name']} lautet: {exercise['description']}."
+        elif details == "tags":
+            message = f"Die Tags der Übung {exercise['name']} sind: {', '.join(exercise['tags'])}."
+        elif details == "video":
+            if "video" in exercise and exercise["video"]:
+                message = f"Hier ist ein Video zur Übung {exercise['name']}: {exercise['video']}"
+            else:
+                message = f"Leider gibt es kein Video zur Übung {exercise['name']}."
+        else:
+            message = "Ich konnte keine Details zu dieser Übung finden."
+
+        dispatcher.utter_message(text=message)
+        return []
+
+
 class ActionTellAJoke(Action):
     def name(self) -> Text:
         return "action_tell_a_joke"

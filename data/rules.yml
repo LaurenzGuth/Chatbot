@@ -43,3 +43,12 @@ rules:
       - slot_was_set:
           - city: "Berlin"
       - action: action_get_weather
+
+  - rule: ask for detail
+    steps:
+      - intent: ask_detail
+        entities:
+          - detail: "Level"
+      - slot_was_set:
+          - detail: "Level"
+      - action: action_get_detail

@@ -80,6 +80,17 @@ nlu:
     - was ist die Wettervorhersage für [Tübingen](city)?
     
 
+- intent: ask_detail
+  examples: |
+    - Welches [Level](detail) ist das?
+    - Welches [Level](detail) hat diese Übung?
+    - Gibt es ein [Video](detail) für diese Übung?
+    - Wie lautet die [Beschreibung](detail) für die Übung?
+    - Mit welchen [Tags](detail) ist die Übung versehen?
+    - Hast du [Tipps](detail) für die Übung?
+    - Gib mir [Tipps](detail) dafür.
+    
+
 - intent: greet
   examples: |
     - Hi

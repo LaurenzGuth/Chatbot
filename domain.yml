@@ -9,11 +9,13 @@ intents:
   - another_one
   - tell_a_joke
   - ask_weather
+  - ask_detail
 
 entities:
   - level
   - weakness
   - city
+  - detail
 
 slots:
 
@@ -41,6 +43,12 @@ slots:
     - type: from_entity
       entity: city
 
+  detail:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: detail
+
 responses:
   utter_greet:
     - text: "Willkommen beim Boulder-Trainer! Wie kann ich dir weiterhelfen?"
@@ -66,3 +74,4 @@ actions:
   - action_suggest_another_exercise
   - action_tell_a_joke
   - action_get_weather
+  - action_get_detail
