@@ -156,6 +156,15 @@ nlu:
     - Du Wichser!
     - Dummkopf!
     - Du Dummkopf!
+    - Blödmann!
+    - Vollidiot!
+    - Depp!
+    - Schwachkopf!
+    - Trottel!
+    - Drecksack!
+    - Penner!
+    - Saukerl!
+    - Mistkerl!
     
 
 - intent: greet

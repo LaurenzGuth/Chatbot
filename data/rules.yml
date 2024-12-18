@@ -45,6 +45,9 @@ rules:
       - action: action_get_weather
 
   - rule: ask for detail
+    condition:
+      - slot_was_set:
+          - weakness
     steps:
       - intent: ask_detail
         entities:

@@ -127,10 +127,6 @@ class ActionGetDetails(Action):
         details = tracker.get_slot("detail").lower()
         last_exercise_id = self.history.get_last_exercises()[-1]
 
-        if last_exercise_id is None:
-            dispatcher.utter_message(text="Wähle erst eine Übung aus, über die du Details erfahren möchtest.")
-            return []
-
         exercise = self.exercises_collection.find_one({"_id": last_exercise_id})
 
         if details == "level":
@@ -144,6 +140,11 @@ class ActionGetDetails(Action):
                 message = f"Hier ist ein Video zur Übung {exercise['name']}: {exercise['video']}"
             else:
                 message = f"Leider gibt es kein Video zur Übung {exercise['name']}."
+        elif details == "tipps":
+            if "tips" in exercise and exercise["tips"]:
+                message = f"Hier ist ein Tipp zur Übung {exercise['name']}: {exercise['tips']}"
+            else:
+                message = f"Leider gibt es keine Tipps zur Übung {exercise['name']}."
         else:
             message = f"Ich konnte keine {details} zu dieser Übung finden."
 
