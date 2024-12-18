@@ -43,11 +43,21 @@ function addMessage(sender, text) {
     const messageDiv = document.createElement("div");
     messageDiv.className = sender;
 
+    const messageContainer = document.createElement("div");
+    messageContainer.className = "message-container";
+
+    const icon = document.createElement("img");
+    icon.className = "message-icon";
+    icon.src = sender === "user" ? "user-icon.png" : "bot-icon.png"; 
+    icon.alt = "icon";
+    messageContainer.appendChild(icon);
+
     const messageBox = document.createElement("div");
     messageBox.className = "message-box";
     messageBox.textContent = text;
 
-    messageDiv.appendChild(messageBox);
+    messageContainer.appendChild(messageBox);
+    messageDiv.appendChild(messageContainer);
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
