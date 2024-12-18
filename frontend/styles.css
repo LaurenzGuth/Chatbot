@@ -30,6 +30,7 @@ body {
     max-width: 720px;
     padding: 20px;
     margin: 0 auto;
+    border-radius: 5px;
 }
 
 .user-input-button{

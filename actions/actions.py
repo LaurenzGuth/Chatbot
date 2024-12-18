@@ -145,7 +145,7 @@ class ActionGetDetails(Action):
             else:
                 message = f"Leider gibt es kein Video zur Übung {exercise['name']}."
         else:
-            message = "Ich konnte keine Details zu dieser Übung finden."
+            message = f"Ich konnte keine {details} zu dieser Übung finden."
 
         dispatcher.utter_message(text=message)
         return []

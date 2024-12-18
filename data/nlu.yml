@@ -26,6 +26,7 @@ nlu:
     - Ich will meine [Kraftausdauer](weakness) steigern.
     - Ich möchte an meiner [Technik](weakness) arbeiten.
     - Ich will meine [Schnelligkeit](weakness) verbessern.
+    
 
 - intent: ask_exercise
   examples: |
@@ -41,6 +42,21 @@ nlu:
     - Übung für [Rücken](weakness)
     - Übung für [Bauch](weakness)
     - Übung für [Brust](weakness)
+    - Hast du Vorschläge für [Arme](weakness)?
+    - Was hilft gegen Schwäche im [Handgelenk](weakness)?
+    - Zeig mir eine Übung für [Sprungkraft](weakness).
+    - Ich brauche etwas für [Ausdauer](weakness).
+    - Was trainiert meine [Schnelligkeit](weakness)?
+    - Kennst du eine Übung für [Flexibilität](weakness)?
+    - Welche Übung stärkt den [Nacken](weakness)?
+    - Eine gute Übung für [Core](weakness)?
+    - Übung zur Verbesserung der [Balance](weakness)?
+    - Hast du was für [Beweglichkeit](weakness)?
+    - Ich suche etwas für [Handkraft](weakness).
+    - Eine Übung zur Kräftigung der [Knöchel](weakness)?
+    - Wie trainiere ich [Hüfte](weakness)?
+    - Gib mir eine Übung für die [Oberschenkel](weakness).
+
 
 - intent: another_one
   examples: |
@@ -52,6 +68,29 @@ nlu:
     - noch eine Übung
     - noch eine Übung bitte
     - eine weitere
+
+
+- intent: ask_detail
+  examples: |
+    - Welches [Level](detail) ist das?
+    - Welches [Level](detail) hat diese Übung?
+    - Gibt es ein [Video](detail) für diese Übung?
+    - Wie lautet die [Beschreibung](detail) für die Übung?
+    - Mit welchen [Tags](detail) ist die Übung versehen?
+    - Hast du [Tipps](detail) für die Übung?
+    - Gib mir [Tipps](detail) dafür.
+    - Welche [Infos](detail) hast du dazu?
+    - Kannst du mir die [Beschreibung](detail) schicken?
+    - Gibt es eine [Anleitung](detail) dazu?
+    - Welche [Hinweise](detail) gibt es für diese Übung?
+    - Was sind die [Schritte](detail) für diese Übung?
+    - Gibt es ein [Beispielvideo](detail) dazu?
+    - Welche [Merkmale](detail) hat diese Übung?
+    - Was bedeutet dieser [Tag](detail)?
+    - Kannst du mir das [Level](detail) genauer erklären?
+    - Was steht in der [Beschreibung](detail)?
+    - Gibt es [Details](detail) zu dieser Übung?
+    - Kannst du [Tipps](detail) für Anfänger geben?
     
 
 - intent: tell_a_joke
@@ -64,7 +103,6 @@ nlu:
     - Erzähl mir was lustiges
     - Erzähl mir einen Witz bitte
     
-
 
 - intent: ask_weather
   examples: |
@@ -80,15 +118,44 @@ nlu:
     - was ist die Wettervorhersage für [Tübingen](city)?
     
 
-- intent: ask_detail
+- intent: smalltalk
   examples: |
-    - Welches [Level](detail) ist das?
-    - Welches [Level](detail) hat diese Übung?
-    - Gibt es ein [Video](detail) für diese Übung?
-    - Wie lautet die [Beschreibung](detail) für die Übung?
-    - Mit welchen [Tags](detail) ist die Übung versehen?
-    - Hast du [Tipps](detail) für die Übung?
-    - Gib mir [Tipps](detail) dafür.
+    - Wie geht's?
+    - Wie ist die Lage?
+    - Wie läuft's
+    - Wie ist die Stimmung?
+    - Alles fit?
+    - Was gibt's Neues?
+    - Was läuft bei dir?
+    - Wie schaut's aus?
+    - Wie steht's?
+    - Wie fühlst du dich?
+    - Alles gut bei dir?
+    - Was treibst du so?
+    - Wie war dein Tag?
+    - Wie war dein Wochenende?
+    - Wie sieht dein Morgen aus?
+    - Hast du einen guten Tag?
+    - Bist du gut drauf?
+    - Alles klar bei dir?
+    - Was machst du so?
+    - Läuft alles rund?
+    - Ist alles im grünen Bereich?
+    - Wie geht's dir heute?
+
+- intent: beleidigung
+  examples: |
+    - Fick dich!
+    - Halts Maul!
+    - Idiot!
+    - Du Idiot!
+    - Arschloch!
+    - Du Arschloch!
+    - Verpiss dich!
+    - Wichser!
+    - Du Wichser!
+    - Dummkopf!
+    - Du Dummkopf!
     
 
 - intent: greet

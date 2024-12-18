@@ -10,6 +10,8 @@ intents:
   - tell_a_joke
   - ask_weather
   - ask_detail
+  - smalltalk
+  - beleidigung
 
 entities:
   - level
@@ -67,6 +69,12 @@ responses:
 
   utter_suggest_exercise:
     - text: "Für dein {level} Level und deine Schwäche {weakness}, empfehle ich folgende Übung: {exercise}"
+
+  utter_smalltalk:
+    - text: "Ich bin leider nicht dafür gemacht zu plaudern. Meine Stärke liegt im Empfehlen von Übungen."
+
+  utter_beleidigung:
+    - text: "Beleidungen sind hier nicht erwünscht!"
 
 actions:
   - action_suggest_exercise
