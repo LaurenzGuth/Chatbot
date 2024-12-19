@@ -1,4 +1,6 @@
-# Exercise Suggestion Bot
+# Bouldertrainer
+
+Laurenz Guth 766248
 
 Dieses Projekt ist ein Rasa-basierter Chatbot, der Übungen basierend auf 
 Benutzereingaben vorschlägt. Der Bot interagiert mit Benutzern, um 
@@ -18,7 +20,12 @@ deren Level und Schwächen zu verstehen und schlägt dann passende
 
 - `actions/actions.py`: Enthält benutzerdefinierte Aktionsklassen für den Bot.
 - `domain.yml`: Definiert die Intents, Entitäten, Slots und Antworten für den Bot.
-- `docker-compose.yml`: Docker Compose-Konfiguration zum Einrichten des Rasa-Servers, Aktionsservers und MongoDB.
+- `config.yml`: Konfigurationsdatei für das NLU- und Core-Modell.
+- `data/nlu.yml`: Trainingsdaten für das NLU-Modell.
+- `data/stories.yml`: Trainingsdaten für das Core-Modell.
+- `data/rules.yml`: Trainingsdaten für das Rule-based Modell.
+- `frontend/app.py`: Flask-App für das Frontend.
+
 - `exercises.json`: JSON-Datei mit Übungsdaten, die in MongoDB geladen werden.
 
 ## Einrichtung
@@ -28,20 +35,19 @@ deren Level und Schwächen zu verstehen und schlägt dann passende
     pip install -r requirements.txt
     ```
 
-3. **Mongodb erstellen**:
-    ```
+3. **Mongodb installieren**:
    
-    ```
 
-4. **Rasa-Server mit aktivierter API und CORS starten**:
+4. **Anwendung starten**:
     ```sh
     rasa run --enable-api --cors "*"
+    rasa run actions
+    python frontend/app.py
     ```
-```
-## Nutzung
-
-- Interagiere mit dem Bot über den Rasa-Server.
-- Verwende die bereitgestellten Intents, um Übungsvorschläge, Witze, Wetterinformationen und Übungsdetails anzufordern.
+5. **Index.html öffnen**:
+    ```
+    frontend/index.html
+    ```
 
 ## Abhängigkeiten
 
@@ -49,7 +55,3 @@ deren Level und Schwächen zu verstehen und schlägt dann passende
 - pymongo==3.12.1
 - rasa==3.0.0
 - rasa-sdk==3.0.0
-
-## Lizenz
-
-Dieses Projekt ist unter der MIT-Lizenz lizenziert.
