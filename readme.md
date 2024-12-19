@@ -35,7 +35,7 @@ deren Level und Schwächen zu verstehen und schlägt dann passende
     pip install -r requirements.txt
     ```
 
-3. **Mongodb installieren**:
+3. **Mongodb installieren und starten**
    
 
 4. **Anwendung starten**:
