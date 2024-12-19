@@ -1,3 +1,4 @@
+import json
 from typing import Any, Text, Dict, List
 from pymongo import MongoClient
 from rasa_sdk import Action, Tracker
@@ -14,6 +15,13 @@ class ActionSuggestExercise(Action):
         self.db = self.client["exercise_database"]
         self.exercises_collection = self.db["exercises"]
         self.history = ExerciseHistory()
+        self.load_data_from_json("db/exercises.json")
+
+    def load_data_from_json(self, file_path: str):
+        with open(file_path, 'r') as file:
+            data = json.load(file)
+            self.exercises_collection.delete_many({})
+            self.exercises_collection.insert_many(data)
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,

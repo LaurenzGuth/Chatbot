@@ -4,7 +4,7 @@ body {
     padding: 20px;
     position: relative;
     height: 100vh;
-    overflow: auto;
+    overflow: hidden;
 }
 #background {
     position: absolute;
@@ -96,7 +96,7 @@ body {
     border-radius: 5px;
     background-color: #f9f9f9;
     display: inline-block;
-    max-width: 60%;
+    max-width: 70%;
 }
 
 .user .message-box {

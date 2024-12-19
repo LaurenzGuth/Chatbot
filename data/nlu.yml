@@ -3,15 +3,21 @@ version: "3.1"
 nlu:
 - intent: inform_level
   examples: |
-    - [4b](level)
-    - [5c](level)
-    - [9a](level)
+    - [5a](level)
+    - [6b](level)
     - [6c](level)
-    - [7a](level)
+    - [4b](level)
+    - Mein [Level](level) ist [5c](level).
+    - Ich klettere [6a](level).
+    - Ich Boulder [7a](level).
+    - so um den [7](level) Grad.
     - [8b](level)
     - [4](level)
     - [5](level)
     - [6](level)
+    - [7a](level)
+    - [7c](level)
+    
 
 
 - intent: work_on_weakness
@@ -64,10 +70,13 @@ nlu:
     - Eine weitere übung.
     - Noch eine Übung bitte
     - Eine Andere
-    - noch eine
+    - noch eine!
     - noch eine Übung
-    - noch eine Übung bitte
+    - noch eine Übung bitte!
     - eine weitere
+    - Hast du auch eine andere Übung für mich?
+    - Schlag mir noch eine Übung vor
+    - Bitte zeigen mir eine weitere Übung!
 
 
 - intent: ask_detail

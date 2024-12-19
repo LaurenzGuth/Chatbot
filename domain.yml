@@ -53,7 +53,7 @@ slots:
 
 responses:
   utter_greet:
-    - text: "Willkommen beim Boulder-Trainer! Wie kann ich dir weiterhelfen?"
+    - text: "Hallo! Wie kann ich dir weiterhelfen?"
 
   utter_goodbye:
     - text: "Bis zum nächsten Mal und viel Spaß beim Bouldern!"

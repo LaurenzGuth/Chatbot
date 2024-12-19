@@ -1,0 +1,478 @@
+[{
+
+  "name": "Plank",
+  "level": 4,
+  "description": "Unterarmstütz für Rumpfmuskulatur. Halte deine Bauchmuskeln angespannt und den Rücken gerade.",
+  "tags": [
+    "Rumpf",
+    "Stabilität",
+    "Anfänger",
+    "Core",
+    "Bauch",
+    "Rücken"
+  ],
+  "tips": "Halte die Position so lange wie möglich. Po nicht absenken."
+},
+{
+  "name": "Dead Hang",
+  "level": 4,
+  "description": "An der Klimmzugstange hängen. Greife die Stange und halte dein Gewicht.",
+  "tags": [
+    "Griffkraft",
+    "Fingertraining",
+    "Schultern",
+    "Unterarme",
+    "Anfänger",
+    "Ziehen",
+    "Oberkörper",
+    "Klimmzug",
+    "Klimmzughilfen"
+  ],
+  "tips": "Schultern aktiv anziehen. Nicht in den Gelenken hängen."
+},
+{
+  "name": "Wall Squats",
+  "level": 5,
+  "description": "Lehne dich mit dem Rücken an die Wand und gleite in eine Kniebeugeposition.",
+  "tags": [
+    "Beine",
+    "Po",
+    "Kniebeuge",
+    "Stabilität",
+    "Anfänger"
+  ],
+  "tips": "Halte die Position für 30 Sekunden bis 1 Minute."
+},
+{
+  "name": "Finger pump",
+  "level": 4,
+  "description": "Öffne und schließe die Finger langsam.",
+  "tags": [
+    "Finger",
+    "Unterarme",
+    "Dehnen",
+    "Griffkraft",
+    "Fingertraining",
+    "Außgleich",
+    "Erholung"
+  ],
+  "tips": "Beim Finger spreizen die Finger richtig öffnen."
+},
+{
+  "name": "Pull-Up",
+  "level": 5,
+  "description": "Klassischer Klimmzug. Ziehe dein Kinn über die Stange und senke dich kontrolliert ab.",
+  "tags": [
+    "Ziehen",
+    "Zugkraft",
+    "Klimmzug",
+    "Oberkörper",
+    "Fortgeschritten",
+    "Klimmzughilfen",
+    "Klimmzugstange",
+    "Klimmzugtraining"
+  ],
+  "video": "https://www.youtube.com/watch?v=Fo93XyyqGhQ",
+  "tips": "Schulterblätter zusammen ziehen. Kinn über die Stange."
+},
+{
+  "name": "Weighted Pull-Up",
+  "level": 7,
+  "description": "Klimmzug mit zusätzlichem Gewicht.",
+  "tags": [
+    "Ziehen",
+    "Oberkörper",
+    "Maximalkraft",
+    "Fortgeschritten",
+    "Zugtraining",
+    "Zugkraft",
+    "Klimmzug",
+    "Oberkörper",
+    "Fortgeschritten",
+    "Klimmzughilfen",
+    "Klimmzugstange",
+    "Klimmzugtraining"
+  ],
+  "tips": "Verwende ein Gewicht, das du für 3 Sätze mit je 3-5 Wiederholungen bewältigen kannst."
+},
+{
+  "name": "One-Arm Dead Hang",
+  "level": 7,
+  "description": "Hänge dich mit nur einem Arm an die Stange.",
+  "tags": [
+    "Griffkraft",
+    "Schultern",
+    "Außgleich",
+    "Stabilität",
+    "Unterarme",
+    "Profi"
+  ],
+  "video": "https://www.youtube.com/watch?v=6HGqLR9qrcI",
+  "tips": "Aktiv hängen!"
+},
+{
+  "name": "Campus Board Ladders",
+  "level": 7,
+  "description": "Campus Board Ladders. 1,3,5",
+  "tags": [
+    "Explosivkraft",
+    "Koordination",
+    "Oberkörper",
+    "Profi",
+    "Finger",
+    "Unterarme",
+    "Campusboard",
+    "Campusboardtraining",
+    "Campusboardübungen",
+    "Finger",
+    "Unterarme",
+    "Fingerkraft",
+    "Griffkraft",
+    "Fingertraining"
+  ],
+  "video": "https://www.youtube.com/watch?v=qUF0sROJiMg"
+},
+{
+  "name": "Fingerboard Repeaters",
+  "level": 6,
+  "description": "10 sec hängen, 5 sec Pause",
+  "tags": [
+    "Fingerkraft",
+    "Griffkraft",
+    "Fingertraining",
+    "Fingerboard",
+    "Fingerboardtraining",
+    "Fingerboardübungen",
+    "Finger",
+    "Unterarme",
+    "Fortgeschritten"
+  ],
+  "video": "https://youtu.be/yUIRzwyQx_E?t=554",
+  "tips": "Mache 3 Sätze mit je 6 Wiederholungen."
+},
+{
+  "name": "Board Problems",
+  "level": 7,
+  "description": "Suche dir 4 Boulderprobleme an deinem Limit.",
+  "tags": [
+    "Spannung",
+    "Kraft",
+    "Bouldern",
+    "Finger",
+    "Unterarme",
+    "Fingerkraft",
+    "Griffkraft",
+    "Fingertraining",
+    "Stabilität",
+    "Board",
+    "Board klettern",
+    "Präzision",
+    "Profi"
+  ],
+  "video": "https://www.youtube.com/watch?v=TU4ozz3XiNY",
+  "tips": "Achte auf Körperspannung und eine saubere Ausführung."
+},
+{
+  "name": "Dyno trainig",
+  "level": 6,
+  "description": "Suche dir einen Boulder und versuche so viele Griffe wie möglich zu überspringen.",
+  "tags": [
+    "Explosivkraft",
+    "Koordination",
+    "Springen",
+    "Sprung",
+    "Dyno",
+    "Ganzkörper",
+    "Fortgeschritten",
+    "Dynamik",
+    "Sprungkraft",
+    "Bouldern",
+    "Training",
+    "Koordinationstraining"
+  ]
+},
+{
+  "name": "One-Arm Lock-Offs",
+  "level": 8,
+  "description": "Ziehe dich in 90 Grad und halte die Position für 5 Sekunden.",
+  "tags": [
+    "Griffkraft",
+    "Oberkörper",
+    "Unterarme",
+    "Profi",
+    "Lock-Off",
+    "Stabilität",
+    "One-Arm",
+    "Klimmzug",
+    "Bouldern",
+    "Techniktraining"
+  ],
+  "tips": "Zur Unterstüzung kannst du ein Band verwenden."
+},
+{
+  "name": "Silent Feet",
+  "level": 4,
+  "description": "Boulder einen Boulder, ohne Geräusche mit den Füßen zu machen.",
+  "tags": [
+    "Balance",
+    "Koordination",
+    "Fußarbeit",
+    "Fußtechnik",
+    "Fuß",
+    "Füße",
+    "Ganzkörper",
+    "Technik",
+    "Anfänger",
+    "Fortgeschritten",
+    "Bouldern",
+    "Präzision",
+    "Körperkontrolle",
+    "Technik"
+  ],
+  "video": "https://www.youtube.com/watch?v=WbscmZDybdQ",
+  "tips": "Konzentriere dich auf eine präzise Fußplatzierung. "
+},
+{
+  "name": "High-Step",
+  "level": 6,
+  "description": "Platziere deinen Fuße so hoch es geht und rolle auf dein Bein.",
+  "tags": [
+    "Flexibilität",
+    "Koordination",
+    "Fußarbeit",
+    "Fußtechnik",
+    "Fuß",
+    "Füße",
+    "Ganzkörper",
+    "Fortgeschritten",
+    "Bouldern",
+    "Technik",
+    "Stabilität",
+    "Beinkraft",
+    "Technik"
+  ],
+  "tips": "Beim aufrollen, richtig auf das Bein setzen."
+},
+{
+  "name": "Figure 4 Hold",
+  "level": 7,
+  "description": "Halte eine Figure-4-Position für 5 Sekunden.",
+  "tags": [
+    "Körperspannung",
+    "Griffkraft",
+    "Technik",
+    "Oberkörper",
+    "Kraft",
+    "Fingertraining",
+    "Koordination",
+    "Bouldern",
+    "Profi",
+    "Stabilität",
+    "Figure 4"
+  ]
+},
+{
+  "name": "Dynamic Toe Hooks",
+  "level": 7,
+  "description": "Setze Toe Hooks dynamisch und halte die Position.",
+  "tags": [
+    "Technik",
+    "Dynamik",
+    "Bouldern",
+    "Fußtechnik",
+    "Toe-Hook",
+    "Toe hook",
+    "Koordination",
+    "Ganzkörper",
+    "Fortgeschritten",
+    "Körperspannung",
+    "Stabilität",
+    "Kraft",
+    "Technik"
+  ]
+},
+{
+  "name": "Heel Hook Mastery",
+  "level": 5,
+  "description": "Suche dir ein Boulder mit einem Heel Hook. Versuche so viel Gewicht mit deinem Bein abzunehmen.",
+  "tags": [
+    "Technik",
+    "Heel Hook",
+    "Bouldern",
+    "Fußtechnik",
+    "Füße",
+    "Fuß",
+    "Körperspannung",
+    "Koordination",
+    "Stabilität",
+    "Fortgeschritten",
+    "Beinmuskulatur",
+    "Kraft",
+    "Technik"
+  ]
+},
+{
+  "name": "Box Jumps",
+  "level": 4,
+  "description": "Springe explosiv auf eine erhöhte Plattform.",
+  "tags": [
+    "Beine",
+    "Explosivkraft",
+    "Sprungkraft",
+    "Dynamik",
+    "Kraft",
+    "Ganzkörper",
+    "Koordination",
+    "Fitness",
+    "Fortgeschritten",
+    "Stabilität"
+  ]
+},
+{
+  "name": "Pistol Squats",
+  "level": 6,
+  "description": "Einbeinige Kniebeugen bis zur tiefsten Position.",
+  "tags": [
+    "Beine",
+    "Balance",
+    "Kraft",
+    "Ganzkörper",
+    "Koordination",
+    "Körperspannung",
+    "Fortgeschritten",
+    "Stabilität",
+    "Knie",
+    "Beinmuskulatur"
+  ],
+  "video": "https://www.youtube.com/watch?v=zSrpQDZwdD0",
+  "tips": "Stell dich auf eine erhöhte Plattform, um die Bewegung zu erleichtern."
+},
+{
+  "name": "Push-Ups",
+  "level": 3,
+  "description": "Klassische Liegestütze mit korrekter Form.",
+  "tags": [
+    "Brust",
+    "Oberkörper",
+    "Kraft",
+    "Ganzkörper",
+    "Arme",
+    "Fitness",
+    "Anfänger",
+    "Core",
+    "Stabilität",
+    "Eigengewicht",
+    "Ausgleichstraining"
+  ]
+},
+{
+  "name": "Incline Push-Ups",
+  "level": 2,
+  "description": "Liegestütze mit den Händen auf einer erhöhten Fläche.",
+  "tags": [
+    "Brust",
+    "Oberkörper",
+    "Kraft",
+    "Fitness",
+    "Anfänger",
+    "Eigengewicht",
+    "Core",
+    "Arme",
+    "Schulter",
+    "Stabilität",
+    "Ausgleichstraining"
+  ],
+  "tips": "Achte darauf, dass deine Hände schulterbreit auseinander sind."
+},
+{
+  "name": "Chest Dips",
+  "level": 5,
+  "description": "Tiefe Dips an Parallelsprossen für die Brustmuskulatur.",
+  "tags": [
+    "Brust",
+    "Oberkörper",
+    "Kraft",
+    "Eigengewicht",
+    "Fortgeschritten",
+    "Trizeps",
+    "Core",
+    "Stabilität",
+    "Arme",
+    "Schulter",
+    "Ausgleichstraining"
+  ],
+  "video": "https://www.youtube.com/watch?v=oA8Sxv2WeOs"
+},
+{
+  "name": "Explosive Clap Push-Ups",
+  "level": 6,
+  "description": "Liegestütze mit einem explosiven Sprung und Klatschen.",
+  "tags": [
+    "Brust",
+    "Oberkörper",
+    "Explosivkraft",
+    "Dynamik",
+    "Fortgeschritten",
+    "Core",
+    "Eigengewicht",
+    "Kraft",
+    "Fitness",
+    "Arme",
+    "Ausgleichstraining"
+  ]
+},
+{
+  "name": "Side Plank Raises",
+  "level": 4,
+  "description": "Hebe und senke die Hüfte in einer Seitplank-Position.",
+  "tags": [
+    "Core",
+    "Bauch",
+    "Stabilität",
+    "Eigengewicht",
+    "Seitliche Bauchmuskeln",
+    "Ganzkörper",
+    "Koordination",
+    "Fortgeschritten",
+    "Fitness",
+    "Ausgleichstraining"
+  ]
+},
+{
+  "name": "Hanging Leg Raises",
+  "level": 6,
+  "description": "Hebe die Beine kontrolliert im Hang bis auf Hüfthöhe.",
+  "tags": [
+    "Core",
+    "Bauch",
+    "Stabilität",
+    "Griffkraft",
+    "Schulter",
+    "Eigengewicht",
+    "Fortgeschritten",
+    "Unterarme",
+    "Körperspannung",
+    "Kraft",
+    "Ausgleichstraining"
+  ],
+  "video": "https://www.youtube.com/watch?v=RuIdJSVTKO4",
+  "tips": "Achte darauf, dass du aktiv hängst und deine Beine nicht schwingen."
+},
+{
+  "name": "Superman",
+  "level": 2,
+  "description": "Auf dem Bauch, abwechselnd Arme und Beine kontrolliert anheben.",
+  "tags": [
+    "Core",
+    "Bauch",
+    "Stabilität",
+    "Körperspannung",
+    "Eigengewicht",
+    "Anfänger",
+    "Koordination",
+    "Fitness",
+    "Rücken",
+    "Ausgleichstraining"
+  ],
+  "tips": "Halte die Position für 2-3 Sekunden."
+}]

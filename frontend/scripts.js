@@ -61,3 +61,7 @@ function addMessage(sender, text) {
     chatBox.appendChild(messageDiv);
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+            addMessage("bot", "Willkommen beim Bouldertrainer! Wenn du Übungen suchst oder an deinen Schwächen arbeiten willst, frag mich einfach.");
+        });
